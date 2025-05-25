@@ -8,21 +8,21 @@ const blogPosts = [
     title: "Les 5 raisons d'opter pour notre IPTV",
     excerpt: "Découvrez pourquoi notre service IPTV se démarque : qualité HD, stabilité, support réactif et plus encore.",
     date: "16 Jan 2025",
-    image: "/movies_67.jpg",
+    image: "/movies_67.webp",
   },
   {
     id: 2,
     title: "Comment configurer l'IPTV sur Smart TV",
     excerpt: "Un guide rapide et simple pour installer votre abonnement IPTV sur votre télé connectée en quelques minutes.",
     date: "16 Jan 2025",
-    image: "/movies_67.jpg",
+    image: "/movies_67.webp",
   },
   {
     id: 3,
     title: "Les erreurs à éviter avec l'IPTV",
     excerpt: "Évitez les pièges courants comme les liens instables, les VPN mal configurés ou les applications obsolètes.",
     date: "16 Jan 2025",
-    image: "/movies_67.jpg",
+    image: "/movies_67.webp",
   },
 ]
 

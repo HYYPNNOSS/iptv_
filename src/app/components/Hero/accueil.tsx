@@ -7,26 +7,26 @@ import { Star, Shield, Clock, Users, CheckCircle2 } from 'lucide-react';
 export default function Hero() {
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center px-4 sm:px-6 py-16 sm:py-24 overflow-hidden">
-      {/* Background Image with SEO optimization */}
+      
       <Image
-        src="/movies_67.jpg" 
+        src="/movies_67.webp" 
         alt="IPTV France - Accueil - Votre service de streaming TV"
         fill
         priority
         className="object-cover object-center z-0"
       />
 
-      {/* Dark overlay with gradient */}
+      
       <div className="absolute inset-0 bg-gradient-to-b from-black/90 to-black/70 z-10"></div>
 
-      {/* Foreground content */}
+      
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         className="relative z-20 w-full max-w-4xl text-center text-white px-4"
       >
-        {/* Trust badges */}
+        
         <div className="flex flex-wrap justify-center gap-4 sm:gap-8 mb-6 sm:mb-8">
           <div className="flex items-center gap-2">
             <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-green-500" />

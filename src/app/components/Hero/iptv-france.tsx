@@ -9,7 +9,7 @@ export default function Hero() {
     <section className="relative min-h-[100vh] flex items-center justify-center px-4 sm:px-6 py-16 sm:py-24 overflow-hidden">
       {/* Background Image with SEO optimization */}
       <Image
-        src="/movies_67.jpg" 
+        src="/movies_67.webp" 
         alt="IPTV France - Meilleur service de streaming TV en France"
         fill
         priority
