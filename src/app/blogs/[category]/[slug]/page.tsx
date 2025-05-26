@@ -29,6 +29,7 @@ export async function generateMetadata({
       },
     };
   } catch (e) {
+    console.log(e);
     return {
       title: 'Not found',
       description: 'This blog post does not exist.',
@@ -52,8 +53,13 @@ export async function generateStaticParams() {
   return params;
 }
 
-export default async function BlogPost({ params }: { params: { category: string, slug: string } }) {
-  const filePath = path.join(process.cwd(), "public", "blogs", params.category, `${params.slug}.json`);
+type PageProps = {
+  params: Promise<{ category: string; slug: string }>;
+};
+
+export default async function BlogPost({ params }: PageProps) {
+  const resolvedParams = await params;
+  const filePath = path.join(process.cwd(), "public", "blogs", resolvedParams.category, `${resolvedParams.slug}.json`);
   const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
   const structuredData = {
@@ -61,7 +67,7 @@ export default async function BlogPost({ params }: { params: { category: string,
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://iptvfrances.com/blog/${params.category}/${params.slug}`
+      "@id": `https://iptvfrances.com/blog/${resolvedParams.category}/${resolvedParams.slug}`
     },
     "headline": data.title,
     "description": data.description,
@@ -89,7 +95,6 @@ export default async function BlogPost({ params }: { params: { category: string,
       <Image src={data.image} alt={data.title} width={800} height={400} className="w-full h-auto rounded-lg" />
       <div className="prose prose-invert mt-6">{data.content}</div>
 
-      
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

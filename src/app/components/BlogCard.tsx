@@ -1,7 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function BlogCard({ post }: { post: any }) {
+interface BlogPost {
+  image: string;
+  title: string;
+  date: string;
+  description: string;
+  category: string;
+  slug: string;
+}
+
+export function BlogCard({ post }: { post: BlogPost }) {
   return (
     <article className="bg-[#1f1f1f] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
       <Image

@@ -31,7 +31,7 @@ export async function GET() {
     try {
       files = fs.readdirSync(blogDir);
     } catch (e) {
-      console.warn(`No blog directory found for ${category}`);
+      console.warn(`No blog directory found for ${e}`);
       continue;
     }
 
