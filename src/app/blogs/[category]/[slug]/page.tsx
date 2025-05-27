@@ -96,6 +96,7 @@ export default async function BlogPost({ params }: PageProps) {
     const fileContent = await fs.readFile(filePath, "utf-8");
     data = JSON.parse(fileContent) as BlogData;
   } catch (error) {
+    console.log(error)
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-white">
         <h1 className="text-3xl font-bold">Blog post not found</h1>
