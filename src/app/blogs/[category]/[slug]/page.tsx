@@ -5,27 +5,29 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 interface BlogData {
-  title: string;
-  description: string;
-  image: string;
-  date: string;
-  content?: string;
-  author?: string;
-  category: string;
   slug: string;
+  title: string;
+  date: string;
+  description: string;
+  content?: string;
+  image: string;
+  category: string;
 }
+
+type PageProps = {
+  params: Promise<{ category: string; slug: string }>;
+};
 
 export async function generateMetadata({
   params,
-}: {
-  params: { category: string; slug: string };
-}): Promise<Metadata> {
+}: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
   const filePath = path.join(
     process.cwd(),
     "public",
     "blogs",
-    params.category,
-    `${params.slug}.json`
+    resolvedParams.category,
+    `${resolvedParams.slug}.json`
   );
 
   try {
@@ -76,12 +78,9 @@ export async function generateStaticParams(): Promise<
   return params;
 }
 
-type PageProps = {
-  params: { category: string; slug: string };
-};
-
-export default async function BlogPost({ params }: PageProps) {
-  const { category, slug } = params;
+export default async function BigBlogPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const { category, slug } = resolvedParams;
 
   const filePath = path.join(
     process.cwd(),
@@ -96,7 +95,7 @@ export default async function BlogPost({ params }: PageProps) {
     const fileContent = await fs.readFile(filePath, "utf-8");
     data = JSON.parse(fileContent) as BlogData;
   } catch (error) {
-    console.log(error)
+    console.log(error);
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-white">
         <h1 className="text-3xl font-bold">Blog post not found</h1>
@@ -117,7 +116,7 @@ export default async function BlogPost({ params }: PageProps) {
     image: data.image,
     author: {
       "@type": "Person",
-      name: data.author || "IPTV Frances",
+      name: "IPTV Frances",
     },
     publisher: {
       "@type": "Organization",
