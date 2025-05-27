@@ -2,6 +2,18 @@ import fs from "fs/promises";
 import path from "path";
 import Image from "next/image";
 import type { Metadata } from "next";
+import Script from "next/script";
+
+interface BlogData {
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  content?: string;
+  author?: string;
+  category: string;
+  slug: string;
+}
 
 export async function generateMetadata({
   params,
@@ -18,7 +30,7 @@ export async function generateMetadata({
 
   try {
     const fileContent = await fs.readFile(filePath, "utf-8");
-    const data = JSON.parse(fileContent);
+    const data = JSON.parse(fileContent) as BlogData;
 
     return {
       title: data.title,
@@ -29,8 +41,8 @@ export async function generateMetadata({
         images: [{ url: data.image }],
       },
     };
-  } catch (e) {
-    console.error("Error loading metadata:", e);
+  } catch (error) {
+    console.error("Error loading metadata:", error);
     return {
       title: "Not found",
       description: "This blog post does not exist.",
@@ -49,8 +61,8 @@ export async function generateStaticParams(): Promise<
     let files: string[] = [];
     try {
       files = await fs.readdir(dir);
-    } catch (e) {
-      console.warn(`No directory found for category: ${category}`, e);
+    } catch (error) {
+      console.warn(`No directory found for category: ${category}`, error);
       continue;
     }
     for (const file of files) {
@@ -79,11 +91,11 @@ export default async function BlogPost({ params }: PageProps) {
     `${slug}.json`
   );
 
-  let data: any;
+  let data: BlogData;
   try {
     const fileContent = await fs.readFile(filePath, "utf-8");
-    data = JSON.parse(fileContent);
-  } catch (e) {
+    data = JSON.parse(fileContent) as BlogData;
+  } catch (error) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-12 text-white">
         <h1 className="text-3xl font-bold">Blog post not found</h1>
@@ -131,7 +143,8 @@ export default async function BlogPost({ params }: PageProps) {
       />
       <div className="prose prose-invert mt-6">{data.content || "No content."}</div>
 
-      <script
+      <Script
+        id="structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />

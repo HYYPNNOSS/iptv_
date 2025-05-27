@@ -8,6 +8,7 @@ interface BlogPost {
   description: string;
   category: string;
   slug: string;
+  content?: string;
 }
 
 export function BlogCard({ post }: { post: BlogPost }) {
