@@ -1,7 +1,7 @@
-import fs from "fs";
+import fs from "fs/promises";
 import path from "path";
 import Image from "next/image";
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export async function generateMetadata({
   params,
@@ -10,14 +10,15 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const filePath = path.join(
     process.cwd(),
-    'public',
-    'blogs',
+    "public",
+    "blogs",
     params.category,
     `${params.slug}.json`
   );
 
   try {
-    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    const fileContent = await fs.readFile(filePath, "utf-8");
+    const data = JSON.parse(fileContent);
 
     return {
       title: data.title,
@@ -29,24 +30,34 @@ export async function generateMetadata({
       },
     };
   } catch (e) {
-    console.log(e);
+    console.error("Error loading metadata:", e);
     return {
-      title: 'Not found',
-      description: 'This blog post does not exist.',
+      title: "Not found",
+      description: "This blog post does not exist.",
     };
   }
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<
+  Array<{ category: string; slug: string }>
+> {
   const categories = ["sports", "films", "news"];
-  const params = [];
+  const params: Array<{ category: string; slug: string }> = [];
 
   for (const category of categories) {
     const dir = path.join(process.cwd(), "public", "blogs", category);
-    const files = fs.readdirSync(dir);
+    let files: string[] = [];
+    try {
+      files = await fs.readdir(dir);
+    } catch (e) {
+      console.warn(`No directory found for category: ${category}`, e);
+      continue;
+    }
     for (const file of files) {
-      const slug = file.replace(".json", "");
-      params.push({ category, slug });
+      if (file.endsWith(".json")) {
+        const slug = file.replace(".json", "");
+        params.push({ category, slug });
+      }
     }
   }
 
@@ -54,46 +65,71 @@ export async function generateStaticParams() {
 }
 
 type PageProps = {
-  params: Promise<{ category: string; slug: string }>;
+  params: { category: string; slug: string };
 };
 
 export default async function BlogPost({ params }: PageProps) {
-  const resolvedParams = await params;
-  const filePath = path.join(process.cwd(), "public", "blogs", resolvedParams.category, `${resolvedParams.slug}.json`);
-  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  const { category, slug } = params;
+
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "blogs",
+    category,
+    `${slug}.json`
+  );
+
+  let data: any;
+  try {
+    const fileContent = await fs.readFile(filePath, "utf-8");
+    data = JSON.parse(fileContent);
+  } catch (e) {
+    return (
+      <div className="max-w-4xl mx-auto px-4 py-12 text-white">
+        <h1 className="text-3xl font-bold">Blog post not found</h1>
+        <p>Please check the URL or try again later.</p>
+      </div>
+    );
+  }
 
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "mainEntityOfPage": {
+    mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://iptvfrances.com/blog/${resolvedParams.category}/${resolvedParams.slug}`
+      "@id": `https://iptvfrances.com/blog/${category}/${slug}`,
     },
-    "headline": data.title,
-    "description": data.description,
-    "image": data.image,
-    "author": {
+    headline: data.title,
+    description: data.description,
+    image: data.image,
+    author: {
       "@type": "Person",
-      "name": data.author || "IPTV Frances"
+      name: data.author || "IPTV Frances",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "IPTV Frances",
-      "logo": {
+      name: "IPTV Frances",
+      logo: {
         "@type": "ImageObject",
-        "url": "https://iptvfrances.com/logo.png"
-      }
+        url: "https://iptvfrances.com/logo.png",
+      },
     },
-    "datePublished": data.date,
-    "dateModified": data.date
+    datePublished: data.date,
+    dateModified: data.date,
   };
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12 text-white space-y-6">
       <h1 className="text-3xl font-bold">{data.title}</h1>
       <p className="text-sm text-gray-400">{data.date}</p>
-      <Image src={data.image} alt={data.title} width={800} height={400} className="w-full h-auto rounded-lg" />
-      <div className="prose prose-invert mt-6">{data.content}</div>
+      <Image
+        src={data.image}
+        alt={data.title}
+        width={800}
+        height={400}
+        className="w-full h-auto rounded-lg"
+      />
+      <div className="prose prose-invert mt-6">{data.content || "No content."}</div>
 
       <script
         type="application/ld+json"
