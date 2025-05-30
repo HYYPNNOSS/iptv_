@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Smarter IPTV Pro - Meilleur Service IPTV en France 2025",
     description: "Smarter IPTV Pro vous offre +15000 chaînes TV, films et séries en HD/4K. Installation facile sur Smart TV, Android, Firestick, iPhone. Support 24/7.",
     type: "website",
-    url: "https://smarteriptvpro.fr",
+    url: "https://iptvfrances.com",
     siteName: "Smarter IPTV Pro",
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"]
   },
   alternates: {
-    canonical: "https://smarteriptvpro.fr"
+    canonical: "https://iptvfrances.com"
   }
 };
 
