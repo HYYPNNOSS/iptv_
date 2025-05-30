@@ -5,7 +5,7 @@ export function GET() {
 User-agent: *
 Allow: /
 
-Sitemap: https://iptvfrances.com/api/sitemap.xml
+Sitemap: https://iptvfrances.com/sitemap.xml
   `.trim();
 
   return new NextResponse(content, {
