@@ -8,9 +8,10 @@ export async function GET() {
   
   const staticPages = [
     { url: '', priority: 1.0, changefreq: 'daily', lastmod: '2025-05-23' },
-    { url: 'channels', priority: 0.9, changefreq: 'weekly', lastmod: '2025-05-20' },
-    { url: 'plans', priority: 0.9, changefreq: 'weekly', lastmod: '2025-05-22' },
-    { url: 'about', priority: 0.5, changefreq: 'weekly', lastmod: '2025-05-10' },
+    { url: 'offres-iptv', priority: 0.9, changefreq: 'weekly', lastmod: '2025-05-20' },
+    { url: 'chaines-iptv', priority: 0.9, changefreq: 'weekly', lastmod: '2025-05-20' },
+    { url: 'iptv-france', priority: 0.9, changefreq: 'weekly', lastmod: '2025-05-22' },
+    { url: 'integration-iptv', priority: 0.5, changefreq: 'weekly', lastmod: '2025-05-10' },
     { url: 'contact', priority: 0.5, changefreq: 'weekly', lastmod: '2025-05-10' },
   ];
 
