@@ -39,7 +39,7 @@ export async function GET() {
     for (const file of files) {
       const slug = file.replace('.json', '');
       blogUrls.push({
-        url: `blog/${category}/${slug}`,
+        url: `blogs/${category}/${slug}`,
         priority: 0.7,
         changefreq: 'monthly',
         lastmod: today,
