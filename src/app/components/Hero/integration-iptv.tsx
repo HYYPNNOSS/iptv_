@@ -62,12 +62,22 @@ export default function Hero() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 sm:mb-12">
-          <Link href="/guide-installation" className="group w-full sm:w-auto">
+          <a
+            href="#integration"
+            className="group w-full sm:w-auto"
+            onClick={e => {
+              e.preventDefault();
+              const el = document.getElementById('integration');
+              if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+          >
             <div className="bg-[#E50914] hover:bg-[#b0060f] transition-all duration-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-white text-base sm:text-lg flex items-center justify-center gap-2 group-hover:scale-105">
               Guide d&apos;Installation
               <span className="text-lg sm:text-xl">→</span>
             </div>
-          </Link>
+          </a>
           <Link href="/contact" className="group w-full sm:w-auto">
             <div className="bg-white/10 hover:bg-white/20 backdrop-blur-sm transition-all duration-300 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold text-white text-base sm:text-lg flex items-center justify-center gap-2 group-hover:scale-105">
               Besoin d&apos;Aide ?

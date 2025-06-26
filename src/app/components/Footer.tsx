@@ -20,7 +20,7 @@ export default function Footer() {
             <li><Link href="/chaines-iptv" className="hover:text-red-500 transition-colors">Chaînes IPTV</Link></li>
             <li><Link href="/iptv-france" className="hover:text-red-500 transition-colors">IPTV France</Link></li>
             <li><Link href="/integration-iptv" className="hover:text-red-500 transition-colors">Intégration IPTV</Link></li>
-            <li><Link href="/blog" className="hover:text-red-500 transition-colors">Blog</Link></li>
+            <li><Link href="/blogs" className="hover:text-red-500 transition-colors">Blogs</Link></li>
             <li><Link href="/faq" className="hover:text-red-500 transition-colors">FAQ</Link></li>
             <li><Link href="/contact" className="hover:text-red-500 transition-colors">Contact</Link></li>
           </ul>

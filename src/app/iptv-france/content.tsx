@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
+
 export default function IPTVFrancePage() {
     return (
       <div className="bg-[#141414] text-white space-y-12 sm:space-y-16 md:space-y-24 px-3 sm:px-4 py-24 lg:px-8 xl:px-12">
@@ -90,7 +92,7 @@ export default function IPTVFrancePage() {
               { name: 'France 5', url: 'https://www.france.tv/france-5' },
               { name: 'C8', url: 'https://www.c8.fr' },
               { name: 'CStar', url: 'https://www.cstar.fr' },
-              { name: 'NRJ 12', url: 'https://www.nrj-play.fr/nrj12' },
+              // { name: 'NRJ 12', url: 'https://www.nrj-play.fr/nrj12' },
               { name: 'BFM TV', url: 'https://www.bfmtv.com' },
               { name: 'LCI', url: 'https://www.tf1info.fr/lci' },
               { name: 'CNEWS', url: 'https://www.cnews.fr' },
@@ -98,7 +100,7 @@ export default function IPTVFrancePage() {
               { name: 'RMC Découverte', url: 'https://rmcdecouverte.bfmtv.com' },
               { name: 'Gulli', url: 'https://www.gulli.fr' },
               { name: 'TMC', url: 'https://www.tf1.fr/tmc' },
-              { name: 'TFX', url: 'https://www.tfx.fr' },
+              // { name: 'TFX', url: 'https://www.tfx.fr' },
               { name: 'TF1 Séries Films', url: 'https://www.tf1.fr/tf1-series-films' },
               { name: '6ter', url: 'https://www.6play.fr/6ter' },
               { name: 'RMC Sport', url: 'https://rmcsport.bfmtv.com' },

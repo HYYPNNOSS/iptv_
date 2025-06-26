@@ -1,6 +1,7 @@
-// "use client"
+"use client"
 import Link from 'next/link';
 import React from 'react';
+
 
 export default function IntegrationIPTVPage() {
   const structuredData = {
@@ -46,7 +47,7 @@ export default function IntegrationIPTVPage() {
   };
 
   return (
-    <div className="bg-[#141414] text-white min-h-screen px-2 py-6 sm:px-4 md:px-8">
+    <div className="bg-[#141414] text-white min-h-screen px-2 py-6 sm:px-4 md:px-8" id='integration'>
       <div className="max-w-[320px] sm:max-w-5xl mx-auto">
         <h2 className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-12 text-center text-red-600">Comment configurer <Link href="/iptv-france" className="hover:text-red-400 transition">IPTV en France</Link></h2>
 

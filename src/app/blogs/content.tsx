@@ -1,6 +1,10 @@
+
 import fs from "fs";
 import path from "path";
 import { BlogCard } from "../components/BlogCard";
+
+
+
 
 async function getPosts() {
   const categories = ["sports", "films", "news"];

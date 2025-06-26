@@ -1,4 +1,4 @@
-// import FAQSection from "../components/FAq";
+
 import FaqPage from './content';
 import { Metadata } from 'next';
 import Script from 'next/script';
