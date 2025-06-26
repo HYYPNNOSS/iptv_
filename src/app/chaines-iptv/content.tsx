@@ -37,7 +37,7 @@ export default function ChainesIPTVPage() {
             {[
               { name: 'TF1', image: '/chaines/tfi.png' },
               { name: 'France 2', image: '/chaines/f2.png' },
-              { name: 'M6', image: '/chaines/m6.png' },
+              { name: 'M6', image: '/chaines/M6.png' },
               { name: 'Canal+', image: '/chaines/cplus.png' },
               { name: 'C8', image: '/chaines/c8.png' },
               { name: 'RMC Sport', image: '/chaines/rmc.png' }
