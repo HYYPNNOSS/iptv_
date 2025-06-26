@@ -13,6 +13,22 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+  async redirects() {
+    return [
+      {
+        source: "/(.*)",
+        has: [
+          {
+            type: "host",
+            value: "iptvfrances.com",
+          },
+        ],
+        destination: "https://iptvfrances.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
