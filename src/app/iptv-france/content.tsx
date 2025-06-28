@@ -94,7 +94,7 @@ export default function IPTVFrancePage() {
               { name: 'CStar', url: 'https://www.cstar.fr' },
               // { name: 'NRJ 12', url: 'https://www.nrj-play.fr/nrj12' },
               { name: 'BFM TV', url: 'https://www.bfmtv.com' },
-              { name: 'LCI', url: 'https://www.tf1info.fr/lci' },
+              // { name: 'LCI', url: 'https://www.tf1info.fr/lci' },
               { name: 'CNEWS', url: 'https://www.cnews.fr' },
               { name: 'RMC Story', url: 'https://rmcstory.bfmtv.com' },
               { name: 'RMC Découverte', url: 'https://rmcdecouverte.bfmtv.com' },
