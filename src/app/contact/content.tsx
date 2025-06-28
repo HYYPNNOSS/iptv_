@@ -44,7 +44,7 @@ export default function ContactPage() {
                 </p>
                 <a
                   className="text-base text-green-400 mt-5 inline-block hover:text-green-300 transition"
-                  href="https://wa.me/your-number"
+                  href="https://wa.me/+33756757174"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
