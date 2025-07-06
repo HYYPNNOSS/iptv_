@@ -22,6 +22,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `Articles ${resolvedParams.category} - Blog IPTV`,
     description: `Découvrez tous nos articles sur ${resolvedParams.category}`,
+    alternates: {
+      canonical: `https://iptvfrances.com/blogs/${resolvedParams.category}`
+    }
   };
 }
 

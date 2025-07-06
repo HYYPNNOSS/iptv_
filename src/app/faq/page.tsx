@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: 'Trouvez toutes les réponses à vos questions sur l\'IPTV : installation, compatibilité, sécurité, et tendances 2025.',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://iptvfrances.com/faq"
+  }
 };
 
 export default function Page() {

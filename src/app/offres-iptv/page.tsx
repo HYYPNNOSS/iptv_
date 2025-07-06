@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: 'Découvrez nos offres IPTV avec des abonnements flexibles et sans engagement. Accès à des milliers de chaînes en direct et à la demande.',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://iptvfrances.com/offres-iptv"
+  }
 };
 
 export default function OffresIPTV() {

@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: 'Découvrez comment installer facilement votre IPTV sur tous vos appareils. Guide étape par étape avec support vidéo et tutoriels détaillés.',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://iptvfrances.com/integration-iptv"
+  }
 };
 
 export default function Page() {

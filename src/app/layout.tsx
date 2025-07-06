@@ -40,9 +40,7 @@ export const metadata: Metadata = {
     description: "Smarter IPTV Pro vous offre +15000 chaînes TV, films et séries en HD/4K. Installation facile sur Smart TV, Android, Firestick, iPhone.",
     images: ["/movies_67.jpg"]
   },
-  alternates: {
-    canonical: "https://iptvfrances.com"
-  }
+  
 };
 
 

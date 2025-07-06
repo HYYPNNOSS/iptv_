@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: 'Explorez notre catalogue complet de chaînes IPTV. Des chaînes françaises, sportives, cinéma, enfants, et internationales réunies dans un seul abonnement.',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://iptvfrances.com/chaines-iptv"
+  }
 };
 
 export default function Page() {

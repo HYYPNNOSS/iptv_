@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Contactez notre équipe de support IPTV pour toute question ou assistance. Nous sommes disponibles par email, WhatsApp et formulaire de contact.',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://iptvfrances.com/contact"
+  }
 };
 
 export default function Page() {

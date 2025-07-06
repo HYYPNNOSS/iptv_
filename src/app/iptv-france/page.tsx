@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     description: 'Découvrez le meilleur service IPTV en France avec des chaînes françaises et internationales. Installation facile, prix abordables et support 24/7.',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://iptvfrances.com/iptv-france"
+  }
 };
 
 export default function Page() {

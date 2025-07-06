@@ -42,6 +42,9 @@ export async function generateMetadata({
         description: data.description,
         images: [{ url: data.image }],
       },
+      alternates: {
+        canonical: `https://iptvfrances.com/blogs/${resolvedParams.category}/${data.slug}`
+      }
     };
   } catch (error) {
     console.error("Error loading metadata:", error);

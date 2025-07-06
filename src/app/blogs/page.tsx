@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: 'Découvrez les dernières actualités IPTV, conseils d\'utilisation, guides d\'installation et articles sur le streaming TV en France.',
     type: 'website',
   },
+  alternates: {
+    canonical: "https://iptvfrances.com/blogs"
+  }
 };
 
 export default function Page() {
