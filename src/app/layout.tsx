@@ -15,32 +15,70 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Smarter IPTV Pro - Meilleur Service IPTV en France 2025",
-  description: "Smarter IPTV Pro vous offre +15000 chaînes TV, films et séries en HD/4K. Installation facile sur Smart TV, Android, Firestick, iPhone. Support 24/7.",
-  keywords: 'smarter iptv pro, iptv france, iptv smart tv, iptv android, iptv firestick, iptv iphone, streaming tv, chaînes françaises, sport en direct',
+  title: "IPTV France Premium 2025 | +120 000 Chaînes HD/4K | Abonnement dès 19€",
+  description: "✅ IPTV France Premium : +120 000 chaînes TV, films et séries HD/4K. Compatible Smart TV, Android, iOS. Installation gratuite. Support 24/7. Essai gratuit disponible.",
+  keywords: [
+    'iptv france',
+    'iptv premium france',
+    'abonnement iptv',
+    'chaînes tv françaises',
+    'iptv smart tv',
+    'iptv android',
+    'iptv pas cher',
+    'streaming tv france',
+    'chaînes premium',
+    'iptv 4k',
+    'iptv firestick',
+    'iptv mag',
+    'iptv m3u',
+    'télévision streaming',
+    'iptv stable'
+  ].join(', '),
+  authors: [{ name: 'IPTV France Team' }],
+  creator: 'IPTV France',
+  publisher: 'IPTV France',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
-    title: "Smarter IPTV Pro - Meilleur Service IPTV en France 2025",
-    description: "Smarter IPTV Pro vous offre +15000 chaînes TV, films et séries en HD/4K. Installation facile sur Smart TV, Android, Firestick, iPhone. Support 24/7.",
+    title: "IPTV France Premium 2025 | +120 000 Chaînes HD/4K",
+    description: "✅ Service IPTV Premium avec +120 000 chaînes TV, films et séries HD/4K. Compatible tous appareils. Installation gratuite. Support 24/7.",
     type: "website",
     url: "https://iptvfrances.com",
-    siteName: "Smarter IPTV Pro",
+    siteName: "IPTV France Premium",
     images: [
       {
-        url: "/movies_67.jpg",
+        url: "/movies_67.webp",
         width: 1200,
         height: 630,
-        alt: "Smarter IPTV Pro - Service IPTV Premium"
+        alt: "IPTV France Premium - Service de streaming TV"
       }
     ],
     locale: "fr_FR"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Smarter IPTV Pro - Meilleur Service IPTV en France 2025",
-    description: "Smarter IPTV Pro vous offre +15000 chaînes TV, films et séries en HD/4K. Installation facile sur Smart TV, Android, Firestick, iPhone.",
-    images: ["/movies_67.jpg"]
+    title: "IPTV France Premium 2025 | +120 000 Chaînes HD/4K",
+    description: "✅ Service IPTV Premium France. +120 000 chaînes TV, films et séries HD/4K. Compatible Smart TV, Android, iOS.",
+    images: ["/iptv_rectangle.png"],
+    creator: "@iptvfrances_"
   },
-  
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'clkyNCQH9teGEJ4f6vGrNMn-rkjRmblDuenbYtz2GJM',
+  },
 };
 
 

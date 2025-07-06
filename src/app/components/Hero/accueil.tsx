@@ -42,13 +42,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 sm:mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-          Bienvenue sur IPTV France
-        </h1>
-        
-        <p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-          Votre destination pour le streaming TV de qualité en France. Découvrez nos offres et commencez à regarder vos chaînes préférées dès aujourd&apos;hui.
-        </p>
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 sm:mb-6">
+  IPTV France Premium 2025 | +120 000 Chaînes HD/4K
+</h1>
+
+<p className="text-lg sm:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
+  Découvrez le meilleur service IPTV de France avec plus de 120 000 chaînes TV, 
+  films et séries en qualité HD/4K. Installation gratuite sur Smart TV, Android, 
+  iOS et tous appareils. Support technique 24/7 inclus.
+</p>
 
         {/* Reviews */}
         <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">

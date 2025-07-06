@@ -16,8 +16,43 @@ export const metadata: Metadata = {
   }
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "IPTV France Premium",
+  description:
+    "Service IPTV Premium avec +120 000 chaînes TV, films et séries HD/4K",
+  url: "https://iptvfrances.com",
+  logo: "https://iptvfrances.com/iptv_rectangle.png",
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+33-756-757-174",
+    contactType: "customer service",
+    availableLanguage: "French",
+  },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "EUR",
+    price: "19.00",
+    availability: "https://schema.org/InStock",
+    validFrom: "2025-01-01",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "2500",
+  },
+};
+
+
 export default function Home() {
   return (
+    <>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
     <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white">
       <Hero />
       <About />
@@ -27,5 +62,6 @@ export default function Home() {
       <FAq />
       <Blogs /> 
     </main>   
+        </>
   )
 }

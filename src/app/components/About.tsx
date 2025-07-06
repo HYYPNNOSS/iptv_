@@ -33,12 +33,15 @@ const About = () => {
             À Propos
           </span>
           <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-bold mt-4 xs:mt-6 mb-3 xs:mb-4">
-            Pourquoi <span className="text-[#E50914]">notre IPTV</span> ?
-          </h2>
-          <p className="text-sm xs:text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
-            Notre service IPTV vous offre un accès instantané à des milliers de chaînes de télévision, 
-            films, et séries. Une expérience de streaming premium à portée de main.
-          </p>
+  Pourquoi Choisir Notre <span className="text-[#E50914]">Service IPTV France</span> ?
+</h2>
+
+<p className="text-sm xs:text-base sm:text-lg text-gray-300 max-w-2xl mx-auto">
+  IPTV France Premium offre la meilleure expérience de streaming TV avec un accès 
+  instantané à plus de 120 000 chaînes françaises et internationales, films récents 
+  et séries populaires. Notre service IPTV stable et sécurisé fonctionne sur tous 
+  vos appareils préférés.
+</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 xs:gap-8 sm:gap-12 items-center">
