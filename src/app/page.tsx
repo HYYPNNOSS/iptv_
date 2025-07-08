@@ -37,11 +37,11 @@ const jsonLd = {
     availability: "https://schema.org/InStock",
     validFrom: "2025-01-01",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "2500",
-  },
+  // aggregateRating: {
+  //   "@type": "AggregateRating",
+  //   ratingValue: "4.9",
+  //   reviewCount: "2500",
+  // },
 };
 
 
