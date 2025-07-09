@@ -18,6 +18,10 @@ type PageProps = {
   params: Promise<{ category: string; slug: string }>;
 };
 
+function truncate(str: string, max: number) {
+  return str.length > max ? str.substring(0, max - 1) + '…' : str;
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
@@ -35,7 +39,7 @@ export async function generateMetadata({
     const data = JSON.parse(fileContent) as BlogData;
 
     return {
-      title: data.title,
+      title: `${truncate(data.title, 50)} | IPTV Frances`,
       description: data.description,
       openGraph: {
         title: data.title,
