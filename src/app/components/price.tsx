@@ -152,7 +152,7 @@ export default function Price() {
   return (
     <main className="min-h-screen bg-[#141414] text-white py-20">
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center mb-4 text-white">IPTV Premium</h1>
+        <h3 className="text-4xl font-bold text-center mb-4 text-white">IPTV Premium</h3>
         <p className="text-lg text-center mb-12 text-gray-400">
           Choisissez votre plan et profitez du meilleur de la télévision
         </p>
@@ -166,7 +166,7 @@ export default function Price() {
               transition={{ delay: index * 0.1 }}
               className="bg-[#141414] border border-[#333] rounded-xl p-6 hover:scale-105 transition-transform duration-300 shadow-md"
             >
-              <h2 className="text-2xl font-bold mb-2 text-white">{plan.name}</h2>
+              <h3 className="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
               <div className="text-3xl font-extrabold text-[#E50914] mb-1">{plan.price}</div>
               <div className="text-sm text-gray-500 mb-4 uppercase tracking-wide">{plan.duration}</div>
               <ul className="mb-6 space-y-2 text-sm text-gray-300">

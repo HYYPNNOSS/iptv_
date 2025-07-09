@@ -6,13 +6,13 @@ export default function Bento() {
   
   return (
     <div className="mx-auto px-3 sm:px-6 py-6 min-h-[100vh] font-sans bg-[#141414]">
-      <h1 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-gray-200">IPTV Bento Box</h1>
+      <h2 className="text-2xl xs:text-3xl sm:text-4xl font-bold mb-6 sm:mb-8 text-center text-gray-200">IPTV Bento Box</h2>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 p-2 sm:p-4 rounded-xl">
         <div className={`${hoverAnimation} h-[250px] xs:h-[300px] sm:h-[350px] sm:col-span-2 lg:col-span-6 bg-[#101010] rounded-lg relative overflow-visible`}>
           <div className="p-3 sm:p-4 h-1/2">
             <div className="flex items-center justify-between mb-2">
-              <h2 className="text-lg sm:text-xl font-bold text-gray-200">Films & Séries</h2>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-200">Films & Séries</h3>
               <div className="bg-[#141414] p-2 rounded-full">
                 <Film className="text-gray-300" size={20} />
               </div>
@@ -33,7 +33,7 @@ export default function Bento() {
         <div className={`${hoverAnimation} h-[200px] xs:h-[250px] sm:h-[300px] lg:col-span-3 bg-[#121212] rounded-lg relative overflow-visible`}>
           <div className="p-3 h-1/2">
             <div className="flex items-center justify-between mb-1">
-              <h2 className="text-base sm:text-lg font-bold text-gray-200">Actualités</h2>
+              <h3 className="text-base sm:text-lg font-bold text-gray-200">Actualités</h3>
               <div className="bg-[#141414] p-1.5 rounded-full">
                 <Globe className="text-gray-300" size={16} />
               </div>
@@ -54,7 +54,7 @@ export default function Bento() {
         <div className={`${hoverAnimation} h-[200px] xs:h-[250px] sm:h-[300px] lg:col-span-3 bg-[#121212] rounded-lg relative overflow-visible`}>
           <div className="p-3 h-1/2">
             <div className="flex items-center justify-between mb-1">
-              <h2 className="text-base sm:text-lg font-bold text-gray-200">Sport</h2>
+              <h3 className="text-base sm:text-lg font-bold text-gray-200">Sport</h3>
               <div className="bg-[#141414] p-1.5 rounded-full">
                 <Trophy className="text-gray-300" size={16} />
               </div>
@@ -75,7 +75,7 @@ export default function Bento() {
         <div className={`${hoverAnimation} h-[200px] xs:h-[250px] sm:h-[300px] lg:col-span-4 bg-[#121212] rounded-lg relative overflow-visible`}>
           <div className="p-3 h-1/2">
             <div className="flex items-center justify-between mb-1">
-              <h2 className="text-base sm:text-lg font-bold text-gray-200">Documentaires</h2>
+              <h3 className="text-base sm:text-lg font-bold text-gray-200">Documentaires</h3>
               <div className="bg-[#141414] p-1.5 rounded-full">
                 <BookOpen className="text-gray-300" size={16} />
               </div>
@@ -96,7 +96,7 @@ export default function Bento() {
         <div className={`${hoverAnimation} h-[200px] xs:h-[250px] sm:h-[300px] lg:col-span-4 bg-[#121212] rounded-lg relative overflow-visible`}>
           <div className="p-3 h-1/2">
             <div className="flex items-center justify-between mb-1">
-              <h2 className="text-base sm:text-lg font-bold text-gray-200">Enfants/Famille</h2>
+              <h3 className="text-base sm:text-lg font-bold text-gray-200">Enfants/Famille</h3>
               <div className="bg-[#141414] p-1.5 rounded-full">
                 <Baby className="text-gray-300" size={16} />
               </div>
@@ -117,7 +117,7 @@ export default function Bento() {
         <div className={`${hoverAnimation} h-[200px] xs:h-[250px] sm:h-[300px] lg:col-span-4 bg-[#121212] rounded-lg relative overflow-visible`}>
           <div className="p-3 h-1/2">
             <div className="flex items-center justify-between mb-1">
-              <h2 className="text-base sm:text-lg font-bold text-gray-200">Adulte +18</h2>
+              <h3 className="text-base sm:text-lg font-bold text-gray-200">Adulte +18</h3>
               <div className="bg-[#141414] p-1.5 rounded-full">
                 <Lock className="text-gray-300" size={16} />
               </div>
