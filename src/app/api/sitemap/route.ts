@@ -14,6 +14,17 @@ export async function GET() {
     { url: 'iptv-france', priority: 0.9, changefreq: 'weekly', lastmod: '2025-05-22' },
     { url: 'integration-iptv', priority: 0.5, changefreq: 'weekly', lastmod: '2025-05-10' },
     { url: 'contact', priority: 0.5, changefreq: 'weekly', lastmod: '2025-05-10' },
+    { url: 'comparaison', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
+    { url: 'channels', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
+    { url: 'features', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
+    { url: 'guide', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
+    { url: 'setup', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
+
+
+
+
+
+
   ];
 
   const blogUrls: {
