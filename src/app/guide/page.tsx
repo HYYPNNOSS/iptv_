@@ -62,7 +62,7 @@ export default function GuidePage() {
         
 
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-red-900 to-zinc-900 py-20">
+        <section className="bg-gradient-to-r from-red-900 to-zinc-900 py-30">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Guide IPTV débutant France
