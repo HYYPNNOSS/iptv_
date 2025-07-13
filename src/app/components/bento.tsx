@@ -117,16 +117,16 @@ export default function Bento() {
         <div className={`${hoverAnimation} h-[200px] xs:h-[250px] sm:h-[300px] lg:col-span-4 bg-[#121212] rounded-lg relative overflow-visible`}>
           <div className="p-3 h-1/2">
             <div className="flex items-center justify-between mb-1">
-              <h3 className="text-base sm:text-lg font-bold text-gray-200">Adulte +18</h3>
+              <h3 className="text-base sm:text-lg font-bold text-gray-200">Multi-appareils</h3>
               <div className="bg-[#141414] p-1.5 rounded-full">
                 <Lock className="text-gray-300" size={16} />
               </div>
             </div>
-            <p className="text-gray-400 text-xs">Contenu réservé aux adultes. Vérification d&apos;âge requise.</p>
+            <p className="text-gray-400 text-xs">Disponible sur Smart TV, Android, iOS, PC et plus — profitez de l’IPTV sur tous vos appareils.</p>
           </div>
           <div className="h-1/2 relative">
             <Image 
-              src="/Dominant.png" 
+              src="/Devices_colletion.png" 
               alt="Contenu adulte" 
               width={250}
               height={200}
