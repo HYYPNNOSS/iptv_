@@ -80,28 +80,42 @@ export default function Hero() {
 
         {/* Reviews with Schema markup context */}
         <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
-        <div className="flex" itemScope itemType="https://schema.org/AggregateRating">
-  <meta itemProp="ratingValue" content="4.9" />
-  <meta itemProp="reviewCount" content="2500" />
-  <meta itemProp="bestRating" content="5" />
-  <meta itemProp="worstRating" content="1" />
-  
-  {/* CORRECTED PART: Define the itemReviewed as a Product */}
-  <span itemProp="itemReviewed" itemScope itemType="https://schema.org/Product">
+        <div itemScope itemType="https://schema.org/Product">
+  <meta itemProp="name" content="IPTV France Premium" />
+  {/* Add other Product properties like description, image, brand if you have them */}
+  {/* <meta itemProp="description" content="Discover the best IPTV service in France..." /> */}
+  {/* <link itemProp="image" href="/movies_67.webp" /> */}
+  {/* <span itemProp="brand" itemScope itemType="https://schema.org/Brand">
     <meta itemProp="name" content="IPTV France Premium" />
-    {/* You can add more properties for the Product here if applicable,
-        e.g., description, brand, offers, image, productID (SKU/MPN/GTIN) */}
-    {/* Example if you have an offer: */}
-    {/* <span itemProp="offers" itemScope itemType="https://schema.org/Offer">
-        <meta itemProp="priceCurrency" content="EUR" />
-        <meta itemProp="price" content="29.99" />
-        <meta itemProp="availability" content="https://schema.org/InStock" />
-    </span> */}
-  </span>
+  </span> */}
 
-  {[...Array(5)].map((_, i) => (
-    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" />
-  ))}
+  {/* Now, embed the AggregateRating directly within the Product */}
+  <div itemProp="aggregateRating" itemScope itemType="https://schema.org/AggregateRating">
+    <meta itemProp="ratingValue" content="4.9" />
+    <meta itemProp="reviewCount" content="2500" />
+    <meta itemProp="bestRating" content="5" />
+    <meta itemProp="worstRating" content="1" />
+  </div>
+
+  {/* Optionally, you can also add an "offers" section if you have pricing */}
+  {/* <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
+    <meta itemProp="priceCurrency" content="EUR" />
+    <meta itemProp="price" content="29.99" />
+    <meta itemProp="availability" content="https://schema.org/InStock" />
+    <link itemProp="url" href="/offres-iptv" />
+  </div> */}
+
+  {/* The visual display of stars and text for the rating */}
+  <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
+    <div className="flex">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" />
+      ))}
+    </div>
+    <span className="text-xs sm:text-sm text-gray-300">
+      <span itemProp="ratingValue">4.9</span>/5 basé sur <span itemProp="reviewCount">2,500+</span> avis clients français
+    </span>
+  </div>
 </div>
           <span className="text-xs sm:text-sm text-gray-300">
             <span itemProp="ratingValue">4.9</span>/5 basé sur <span itemProp="reviewCount">2,500+</span> avis clients français
