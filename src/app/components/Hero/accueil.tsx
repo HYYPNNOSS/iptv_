@@ -80,15 +80,16 @@ export default function Hero() {
 
         {/* Reviews with Schema markup context */}
         <div className="flex items-center justify-center gap-2 mb-6 sm:mb-8">
-          <div className="flex" itemScope itemType="https://schema.org/AggregateRating">
-            <meta itemProp="ratingValue" content="4.9" />
-            <meta itemProp="reviewCount" content="2500" />
-            <meta itemProp="bestRating" content="5" />
-            <meta itemProp="worstRating" content="1" />
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" />
-            ))}
-          </div>
+        <div className="flex" itemScope itemType="https://schema.org/AggregateRating">
+  <meta itemProp="ratingValue" content="4.9" />
+  <meta itemProp="reviewCount" content="2500" />
+  <meta itemProp="bestRating" content="5" />
+  <meta itemProp="worstRating" content="1" />
+  <meta itemProp="itemReviewed" content="IPTV France Premium" />
+  {[...Array(5)].map((_, i) => (
+    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" />
+  ))}
+</div>
           <span className="text-xs sm:text-sm text-gray-300">
             <span itemProp="ratingValue">4.9</span>/5 basé sur <span itemProp="reviewCount">2,500+</span> avis clients français
           </span>

@@ -26,10 +26,14 @@ export default function ComparisonPage() {
       }
     },
     "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.5",
-      "reviewCount": "1250"
-    }
+  "@type": "AggregateRating",
+  "ratingValue": "4.5",
+  "reviewCount": "1250",
+  "itemReviewed": {
+    "@type": "Service",
+    "name": "IPTV France Premium"
+  }
+}
   };
 
   const services = [
