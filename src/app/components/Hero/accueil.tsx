@@ -85,7 +85,20 @@ export default function Hero() {
   <meta itemProp="reviewCount" content="2500" />
   <meta itemProp="bestRating" content="5" />
   <meta itemProp="worstRating" content="1" />
-  <meta itemProp="itemReviewed" content="IPTV France Premium" />
+  
+  {/* CORRECTED PART: Define the itemReviewed as a Product */}
+  <span itemProp="itemReviewed" itemScope itemType="https://schema.org/Product">
+    <meta itemProp="name" content="IPTV France Premium" />
+    {/* You can add more properties for the Product here if applicable,
+        e.g., description, brand, offers, image, productID (SKU/MPN/GTIN) */}
+    {/* Example if you have an offer: */}
+    {/* <span itemProp="offers" itemScope itemType="https://schema.org/Offer">
+        <meta itemProp="priceCurrency" content="EUR" />
+        <meta itemProp="price" content="29.99" />
+        <meta itemProp="availability" content="https://schema.org/InStock" />
+    </span> */}
+  </span>
+
   {[...Array(5)].map((_, i) => (
     <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-yellow-400" />
   ))}

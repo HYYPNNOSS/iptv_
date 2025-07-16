@@ -9,14 +9,10 @@ export default function ComparisonPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Comparatif IPTV France - Meilleur service IPTV", // This product is the comparison page itself
+    "name": "Comparatif IPTV France - Meilleur service IPTV", 
     "description": "Comparaison complète des services IPTV France avec avis, analyse fonctionnalités et évaluation qualité prix",
     "url": "https://iptvfrances.com/comparison",
     "image": "https://iptvfrances.com/images/iptv-comparison-france.jpg",
-    // If this 'review' refers to the comparison page itself, it's fine.
-    // If it's supposed to be a single review *of* the comparison, it should be an array of reviews.
-    // For a comparison page, a single Review might be less common than an AggregateRating.
-    // For simplicity, let's keep it as is, assuming it's a review of the comparison.
     "review": {
       "@type": "Review",
       "reviewRating": {
@@ -33,11 +29,7 @@ export default function ComparisonPage() {
       "@type": "AggregateRating",
       "ratingValue": "4.5",
       "reviewCount": "1250"
-      // REMOVE 'itemReviewed' when aggregateRating is a direct property of the main schema
-      // "itemReviewed": {
-      //   "@type": "Service",
-      //   "name": "IPTV France Premium"
-      // }
+      
     }
   };
 
