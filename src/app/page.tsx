@@ -38,29 +38,20 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Service",
-  name: "IPTV France Premium",
-  description: "Service IPTV Premium avec +120 000 chaînes TV, films et séries HD/4K pour la France. Installation gratuite sur tous appareils.",
+  // Change the main type from "Service" to "Product"
+  "@type": "Product",
+  name: "Abonnement IPTV Premium France 2025", // More specific product name
+  description: "Meilleur service IPTV France 2025 avec +120 000 chaînes HD/4K, films et séries. Installation gratuite sur Smart TV, Android, iOS. Support 24/7. Essai gratuit disponible.",
   url: "https://iptvfrances.com",
-  logo: "https://iptvfrances.com/iptv_rectangle.png",
-  provider: {
+  image: "https://iptvfrances.com/iptv_rectangle.png", // Use 'image' for Product
+  // 'brand' is more appropriate for Product than 'provider' for this context
+  brand: {
     "@type": "Organization",
     name: "Smarter IPTV Pro",
     url: "https://iptvfrances.com",
     logo: "https://iptvfrances.com/iptv_rectangle.png"
   },
-  serviceType: "IPTV Streaming Service",
-  areaServed: {
-    "@type": "Country",
-    name: "France"
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+33-756-757-174",
-    contactType: "customer service",
-    availableLanguage: "French",
-    hoursAvailable: "24/7"
-  },
+  // Keep offers as they are, but they are nested under the Product
   offers: [{
     "@type": "Offer",
     name: "Abonnement IPTV 3 Mois",
@@ -78,24 +69,23 @@ const jsonLd = {
     validFrom: "2025-01-01",
     category: "IPTV Subscription"
   }],
+  // The aggregateRating should refer to the Product
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
     reviewCount: "2500",
     bestRating: "5",
-    worstRating: "1",
-    itemReviewed: {
-      "@type": "Service",
-      "name": "IPTV France Premium"
-    }
+    worstRating: "1"
+    // No need for itemReviewed when it's directly within the Product schema
   },
+  // You can still keep hasOfferCatalog if it helps describe variations or related offers
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Chaînes IPTV France",
     itemListElement: [{
       "@type": "Offer",
       itemOffered: {
-        "@type": "Service",
+        "@type": "Service", // This can remain Service if it's describing a specific service component
         name: "Chaînes Sport France",
         description: "Accès aux chaînes sportives françaises en HD/4K"
       }
@@ -107,6 +97,23 @@ const jsonLd = {
         description: "Bibliothèque de films et séries français et internationaux"
       }
     }]
+  },
+  // If you want to include contact information for the product/service provider,
+  // it's better placed under the 'brand' (Organization) or as a separate ContactPoint
+  // on the page, rather than directly under Product unless it's for the product itself.
+  // For now, let's remove it from the main Product scope to simplify.
+  contactPoint: {
+    "@type": "ContactPoint",
+    telephone: "+33-756-757-174",
+    contactType: "customer service",
+    availableLanguage: "French",
+    hoursAvailable: "24/7"
+  },
+  // 'areaServed' is also more typically associated with LocalBusiness or Service,
+  // but if your product is strictly for France, you can keep it.
+  areaServed: {
+    "@type": "Country",
+    name: "France"
   }
 };
 

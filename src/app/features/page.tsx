@@ -117,14 +117,15 @@ const FeaturePage = () => {
       "availability": "https://schema.org/InStock"
     },
     "aggregateRating": {
-  "@type": "AggregateRating",
-  "ratingValue": "4.8",
-  "ratingCount": "1247",
-  "itemReviewed": {
-    "@type": "Service",
-    "name": "IPTV France Features"
-  }
-},
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "1247"
+      // REMOVE 'itemReviewed' when aggregateRating is a direct property of the main schema
+      // "itemReviewed": {
+      //   "@type": "Service",
+      //   "name": "IPTV France Features"
+      // }
+    },
     "featureList": [
       "IPTV 4K France",
       "Multi-écrans simultanés",
