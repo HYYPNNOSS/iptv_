@@ -127,7 +127,7 @@ export default function FAQSection() {
                 Contacter le Support
               </a>
               <a
-                href="/guide-installation"
+                href="/guide"
                 className="border border-[#E50914] text-[#E50914] px-6 py-3 rounded-lg font-semibold hover:bg-[#E50914] hover:text-white transition-colors duration-200"
               >
                 Guide d&apos;Installation
