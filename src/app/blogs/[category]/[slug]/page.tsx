@@ -116,11 +116,11 @@ export default async function BigBlogPage({ params }: PageProps) {
     "@type": "BlogPosting",
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://iptvfrances.com/blog/${category}/${slug}`,
+      "@id": `https://iptvfrances.com/blogs/${category}/${slug}`,
     },
     headline: data.title,
     description: data.description,
-    image: data.image,
+    image: `https://iptvfrances.com${data.image}`,
     author: {
       "@type": "Person",
       name: "IPTV Frances",
@@ -130,11 +130,12 @@ export default async function BigBlogPage({ params }: PageProps) {
       name: "IPTV Frances",
       logo: {
         "@type": "ImageObject",
-        url: "https://iptvfrances.com/logo.png",
+        url: "https://iptvfrances.com/iptv_rectangle.png",
       },
     },
     datePublished: data.date,
-    dateModified: data.date,
+    dateModified: data.date // SEO Improvement: Updated publisher logo and @id URL (2025-09-25)
+
   };
 
   return (

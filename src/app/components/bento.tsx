@@ -127,7 +127,9 @@ export default function Bento() {
           <div className="h-1/2 relative">
             <Image 
               src="/Devices_colletion.png" 
-              alt="Contenu adulte" 
+              alt="Multi-appareils" // SEO Improvement: Updated alt attribute for better description (2025-09-25)
+
+
               width={250}
               height={200}
               className="absolute right-0 bottom-0 w-[150px] xs:w-[200px] sm:w-[250px] h-fit object-cover z-20"

@@ -82,7 +82,7 @@ const About = () => {
               src="/iptv-about.png"
               alt="IPTV France Premium - Service streaming TV français compatible tous appareils"
               className="w-[250px] xs:w-[300px] sm:w-[400px] md:w-[500px] h-auto relative z-10"
-              unoptimized
+              // SEO Improvement: Removed 'unoptimized' prop for better image optimization (2025-09-25)
             />
           </div>
 

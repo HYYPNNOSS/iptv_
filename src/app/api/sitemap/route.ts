@@ -14,11 +14,13 @@ export async function GET() {
     { url: 'iptv-france', priority: 0.9, changefreq: 'weekly', lastmod: '2025-05-22' },
     { url: 'integration-iptv', priority: 0.5, changefreq: 'weekly', lastmod: '2025-05-10' },
     { url: 'contact', priority: 0.5, changefreq: 'weekly', lastmod: '2025-05-10' },
-    { url: 'comparison', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
-    { url: 'channels', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
-    { url: 'features', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
-    { url: 'guide', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
-    { url: 'setup', priority: 0.1, changefreq: 'weekly', lastmod: '2025-06-10' },
+    // SEO Improvement: Updated priority and lastmod for static pages (2025-09-25)
+    { url: 'comparison', priority: 0.7, changefreq: 'weekly', lastmod: '2025-09-25' },
+    { url: 'channels', priority: 0.7, changefreq: 'weekly', lastmod: '2025-09-25' },
+    { url: 'features', priority: 0.7, changefreq: 'weekly', lastmod: '2025-09-25' },
+    { url: 'guide', priority: 0.7, changefreq: 'weekly', lastmod: '2025-09-25' },
+    { url: 'setup', priority: 0.7, changefreq: 'weekly', lastmod: '2025-09-25' }, // SEO Improvement: Updated priority and lastmod for static pages (2025-09-25)
+
 
 
 

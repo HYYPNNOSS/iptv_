@@ -48,7 +48,8 @@ export default function ChainesIPTVPage() {
                   alt={`Logo ${channel.name}`}
                   width={60}
                   height={60}
-                  className="mx-auto mb-2 w-10 h-fit xs:w-12 sm:w-16 hover:scale-110 transition-transform"
+                  className="mx-auto mb-2 w-10 h-fit xs:w-12 sm:w-16 hover:scale-110 transition-transform" // SEO Improvement: Ensured width, height, and alt attributes are present (2025-09-25)
+
                 />
                 {channel.name}
               </div>
@@ -73,7 +74,8 @@ export default function ChainesIPTVPage() {
                   alt={`Logo ${channel.name}`}
                   width={80}
                   height={80}
-                  className="mx-auto mb-2 w-12 xs:w-16 sm:w-20 h-fit hover:scale-110 transition-transform"
+                  className="mx-auto mb-2 w-12 xs:w-16 sm:w-20 h-fit hover:scale-110 transition-transform" // SEO Improvement: Ensured width, height, and alt attributes are present (2025-09-25)
+
                 />
                 <span className="text-xs xs:text-sm sm:text-base">{channel.name}</span>
               </div>

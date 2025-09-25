@@ -21,8 +21,14 @@ export default function Page() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "Guide d'Installation IPTV",
-    "description": "Guide complet pour installer l'IPTV sur différents appareils",
+    "name": "Guide d'Installation IPTV - Tutoriel Complet 2025",
+    "description": "Découvrez comment installer facilement votre IPTV sur tous vos appareils. Guide étape par étape avec support vidéo et tutoriels détaillés.",
+    "url": "https://iptvfrances.com/integration-iptv",
+    "image": "https://iptvfrances.com/iptv_rectangle.png",
+    "supply": {
+      "@type": "HowToSupply",
+      "name": "Abonnement IPTV Premium"
+    },
     "step": [
       {
         "@type": "HowToStep",
@@ -39,7 +45,7 @@ export default function Page() {
         "name": "Entrer votre lien M3U",
         "text": "Renseignez le lien fourni après l'achat"
       }
-    ]
+    ] // SEO Improvement: Enhanced HowTo schema (2025-09-25)
   };
 
   return (

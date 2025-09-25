@@ -23,13 +23,43 @@ export default function OffresIPTV() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "Abonnement IPTV",
-    "description": "Service de streaming TV avec accès à des milliers de chaînes",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "EUR",
-      "availability": "https://schema.org/InStock"
-    }
+    name: "Offres d'Abonnement IPTV Premium France",
+    description: "Découvrez nos offres IPTV avec des abonnements flexibles et sans engagement. Accès à des milliers de chaînes en direct et à la demande.",
+    url: "https://iptvfrances.com/offres-iptv",
+    image: "https://iptvfrances.com/iptv_rectangle.png",
+    brand: {
+      "@type": "Organization",
+      name: "Smarter IPTV Pro",
+      url: "https://iptvfrances.com",
+      logo: "https://iptvfrances.com/iptv_rectangle.png"
+    },
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Abonnement IPTV 3 Mois",
+        priceCurrency: "EUR",
+        price: "19.00",
+        availability: "https://schema.org/InStock",
+        validFrom: "2025-01-01",
+        category: "IPTV Subscription"
+      },
+      {
+        "@type": "Offer",
+        name: "Abonnement IPTV 12 Mois",
+        priceCurrency: "EUR",
+        price: "39.00",
+        availability: "https://schema.org/InStock",
+        validFrom: "2025-01-01",
+        category: "IPTV Subscription"
+      }
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "2500",
+      bestRating: "5",
+      worstRating: "1"
+    } // SEO Improvement: Enhanced Product schema (2025-09-25)
   };
 
   return (
