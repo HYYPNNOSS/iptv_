@@ -92,7 +92,7 @@ export default function ContactPage() {
             <h2 className="text-3xl font-semibold mb-8">Contactez notre support IPTV</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-base font-medium mb-2">Nom</label> // SEO Improvement: Associated labels with inputs (2025-09-25)
+              <label htmlFor="name" className="block text-base font-medium mb-2">Nom</label> {/* SEO Improvement: Associated labels with inputs (2025-09-25) */}
 
                 <input
                   id="name"
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-base font-medium mb-2">Adresse Email</label> // SEO Improvement: Associated labels with inputs (2025-09-25)
+              <label htmlFor="email" className="block text-base font-medium mb-2">Adresse Email</label> {/* SEO Improvement: Associated labels with inputs (2025-09-25) */}
 
                 <input
                   id="email"
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-base font-medium mb-2">Message</label> // SEO Improvement: Associated labels with inputs (2025-09-25)
+              <label htmlFor="message" className="block text-base font-medium mb-2">Message</label> {/* SEO Improvement: Associated labels with inputs (2025-09-25) */}
 
                 <textarea
                   id="message"
