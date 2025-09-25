@@ -36,7 +36,9 @@ export async function generateMetadata({
 
   try {
     const fileContent = await fs.readFile(filePath, "utf-8");
-    const data = JSON.parse(fileContent) as BlogData;
+    // Clean the JSON content before parsing
+    const cleanedContent = fileContent.replace(/[\u0000-\u001F\u007F-\u009F]/g, "");
+    const data = JSON.parse(cleanedContent) as BlogData;
 
     return {
       title: `${truncate(data.title, 50)} | IPTV Frances`,
@@ -100,7 +102,9 @@ export default async function BigBlogPage({ params }: PageProps) {
   let data: BlogData;
   try {
     const fileContent = await fs.readFile(filePath, "utf-8");
-    data = JSON.parse(fileContent) as BlogData;
+    // Clean the JSON content before parsing
+    const cleanedContent = fileContent.replace(/[\u0000-\u001F\u007F-\u009F]/g, "");
+    data = JSON.parse(cleanedContent) as BlogData;
   } catch (error) {
     console.log(error);
     return (
@@ -134,8 +138,7 @@ export default async function BigBlogPage({ params }: PageProps) {
       },
     },
     datePublished: data.date,
-    dateModified: data.date // SEO Improvement: Updated publisher logo and @id URL (2025-09-25)
-
+    dateModified: data.date, // SEO Improvement: Updated publisher logo and @id URL (2025-09-25)
   };
 
   return (
